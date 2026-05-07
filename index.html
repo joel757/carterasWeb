@@ -6,39 +6,83 @@
     <title>carterasWeb - Lujo Silencioso</title>
     <meta name="description" content="E-commerce premium de carteras elegantes y minimalistas.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="client-header">
         <div class="logo">carterasWeb</div>
-        <nav>
-            <a href="#coleccion">Colección</a>
-            <a href="admin.html">Admin</a>
+        <nav class="desktop-nav">
+            <a href="#novedades">Novedades</a>
+            <a href="#totes">Totes</a>
+            <a href="#bandoleras">Bandoleras</a>
+            <a href="admin.html" class="admin-link">Admin</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Hero estilo campaña Prune -->
+        <section class="hero campaign-hero">
             <div class="hero-content fade-in-up">
-                <h1>Elegancia en cada detalle</h1>
-                <p>Descubre nuestra nueva colección de carteras de cuero premium. Diseñadas para la mujer moderna.</p>
-                <a href="#coleccion" class="btn-primary">Ver Colección</a>
+                <h1>Fall Winter '26</h1>
+                <p>La elegancia atemporal del cuero argentino.</p>
+                <a href="#novedades" class="btn-primary">Ver Novedades</a>
             </div>
         </section>
 
-        <section id="coleccion" class="collection-section">
+        <!-- Colecciones Destacadas (Banners) -->
+        <section class="featured-collections">
+            <div class="collection-banner" style="background-image: url('https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                <div class="banner-overlay">
+                    <h2>Totes</h2>
+                    <a href="#totes" class="btn-outline">Comprar</a>
+                </div>
+            </div>
+            <div class="collection-banner" style="background-image: url('https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                <div class="banner-overlay">
+                    <h2>Bandoleras</h2>
+                    <a href="#bandoleras" class="btn-outline">Comprar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section id="novedades" class="collection-section">
             <div class="section-title fade-in-up">
-                <h2>Nuestras Carteras</h2>
+                <h2>Catálogo Completo</h2>
                 <div class="divider"></div>
             </div>
             <div class="product-grid" id="product-grid">
-                <!-- Products will be injected here via JS -->
+                <!-- Los productos se inyectarán aquí vía JS -->
+            </div>
+        </section>
+        
+        <!-- Beneficios -->
+        <section class="benefits">
+            <div class="benefit-item">
+                <h3>Envío Gratis</h3>
+                <p>En compras superiores a $150.000</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Cuero 100% Genuino</h3>
+                <p>Calidad artesanal garantizada</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Atención Personalizada</h3>
+                <p>Te asesoramos por WhatsApp</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 carterasWeb. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-logo">carterasWeb</div>
+            <div class="footer-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Políticas de Cambio</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 carterasWeb. Inspirado en el diseño premium.</p>
     </footer>
 
     <!-- Firebase SDK (Compat Version para fácil uso local) -->
