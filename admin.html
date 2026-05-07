@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - carterasWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="logo">carterasWeb</div>
+            <nav class="admin-nav">
+                <a href="#" class="active">Productos</a>
+                <a href="index.html">Ver Tienda</a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-topbar">
+                <h2>Gestión de Catálogo</h2>
+            </header>
+
+            <div class="admin-panel">
+                <section class="admin-section add-product-section fade-in-up">
+                    <h3>Añadir Nueva Cartera</h3>
+                    <form id="add-product-form" class="admin-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required placeholder="Ej: Bolso Ethereal">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Precio ($)</label>
+                            <input type="number" id="price" required placeholder="Ej: 120" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">URL de la Imagen</label>
+                            <input type="url" id="image" required placeholder="https://ejemplo.com/foto.jpg">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Descripción</label>
+                            <textarea id="description" rows="3" required placeholder="Detalles de la cartera..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Añadir Producto</button>
+                    </form>
+                </section>
+
+                <section class="admin-section product-list-section fade-in-up">
+                    <h3>Lista de Carteras</h3>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-product-list">
+                                <!-- Admin products will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK (Compat Version para fácil uso local) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

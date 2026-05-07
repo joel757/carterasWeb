@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carterasWeb - Lujo Silencioso</title>
+    <meta name="description" content="E-commerce premium de carteras elegantes y minimalistas.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="client-header">
+        <div class="logo">carterasWeb</div>
+        <nav>
+            <a href="#coleccion">Colección</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content fade-in-up">
+                <h1>Elegancia en cada detalle</h1>
+                <p>Descubre nuestra nueva colección de carteras de cuero premium. Diseñadas para la mujer moderna.</p>
+                <a href="#coleccion" class="btn-primary">Ver Colección</a>
+            </div>
+        </section>
+
+        <section id="coleccion" class="collection-section">
+            <div class="section-title fade-in-up">
+                <h2>Nuestras Carteras</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 carterasWeb. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Firebase SDK (Compat Version para fácil uso local) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
