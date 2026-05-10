@@ -16,6 +16,7 @@
             <a href="#totes">Totes</a>
             <a href="#bandoleras">Bandoleras</a>
             <a href="admin.html" class="admin-link">Admin</a>
+            <a href="#" id="cart-icon" class="cart-icon">🛒 (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
@@ -84,6 +85,63 @@
         </div>
         <p class="copyright">&copy; 2026 carterasWeb. Inspirado en el diseño premium.</p>
     </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Nombre Producto</h2>
+                    <p id="modal-price" class="modal-price">$ 0</p>
+                    <p id="modal-desc" class="modal-desc">Descripción...</p>
+                    
+                    <div class="modal-options">
+                        <div class="color-selector">
+                            <span>Color:</span>
+                            <div class="color-options" id="modal-colors">
+                                <button class="color-btn active" style="background-color: #111;" data-color="Negro"></button>
+                                <button class="color-btn" style="background-color: #8B4513;" data-color="Suela"></button>
+                                <button class="color-btn" style="background-color: #e5d8c5;" data-color="Beige"></button>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <span>Cantidad:</span>
+                            <div class="qty-controls">
+                                <button id="qty-minus">-</button>
+                                <span id="qty-value">1</span>
+                                <button id="qty-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="modal-add-to-cart" class="btn-primary w-100">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide-in Cart -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button id="cart-close" class="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items inyectados por JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$ 0</span>
+            </div>
+            <button id="btn-checkout" class="btn-primary w-100">Finalizar por WhatsApp</button>
+        </div>
+    </div>
 
     <!-- Firebase SDK (Compat Version para fácil uso local) -->
     <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
